@@ -4,7 +4,7 @@ nodemcu-lua
 Lua scripts for Nodemcu mostly testing MQTT protocol and CoAP (planned upon future Lua release by Nodemcu).  Please use at will to jump start your MQTT prototyping on the Nodemcu platform.  I use the following tools for Nodemcu and Lua:
 
  - [Nodemcu Lua API Reference](https://github.com/nodemcu/nodemcu-firmware/wiki/nodemcu_api_en)
- - [Nodemcu Flasher for firmware updates](hhttps://github.com/nodemcu/nodemcu-flasher)
+ - [Nodemcu Flasher for firmware updates](https://github.com/nodemcu/nodemcu-flasher)
  - [Lua Uploader for Windows](https://github.com/hwiguna/g33k/tree/master/ArduinoProjects/Windows/ESP8266_Related)
 
 mqtt_test.lua
