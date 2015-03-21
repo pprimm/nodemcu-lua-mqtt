@@ -1,5 +1,5 @@
 
-nodemcu-lua
+nodemcu-lua-mqtt
 ===========
 Lua scripts for Nodemcu mostly testing MQTT protocol and CoAP (planned upon future Lua release by Nodemcu).  Please use at will to jump start your MQTT prototyping on the Nodemcu platform.  I use the following tools for Nodemcu and Lua:
 
@@ -7,6 +7,9 @@ Lua scripts for Nodemcu mostly testing MQTT protocol and CoAP (planned upon futu
  - [Nodemcu Flasher for firmware updates](https://github.com/nodemcu/nodemcu-flasher)
  - [Lua Uploader for Windows](https://github.com/hwiguna/g33k/tree/master/ArduinoProjects/Windows/ESP8266_Related)
 
+> *A note on Nodemcu firmware*
+
+> I have been unable to get the majority of my Lua test code to work properly on any Nodemcu firmware version after 20150127.  Issues with later firmware version have ranged from connection errors with broker to crashes of various sorts.  These Lua test scripts will probably only run on firmware **20150127**!
 mqtt_test.lua
 ----------------
 This lua script creates an MQTT accessible counter service.  A service is defined as:
@@ -16,8 +19,9 @@ This lua script creates an MQTT accessible counter service.  A service is define
 -  a list of ***RPC*** topics for performing direct method calls on the service; responses are directed a calling MQTT client
 
 > *Service API*
+> 
 > - **status**: state variable to show whether offline or online (enhanced by use of Last Will Testament)
-> - **counterValue**: main state variable with value of counter (read: get/ESP8266/counterValue) (write: set/ESP8266/counterValue).  The allow value is clipped at 0..100
+> - **counterValue**: main state variable with value of counter (read: get/ESP8266/counterValue) (write: set/ESP8266/counterValue).  The allow value is clipped at 0..100.  The counterValue will cycle up/down between 0 and 100; inc/dec by 1 every second.
 > - **counterCmd**: this set topic will control whether the counter goes up or down.  Allowed values are "up" or "down"
 > - **echo**:  whatever you write to the set topic gets echoed to the get topic (read: get/ESP8266/echo) (write: set/ESP8266/echo)
 
