@@ -10,6 +10,7 @@ Lua scripts for Nodemcu mostly testing MQTT protocol and CoAP (planned upon futu
 > *A note on Nodemcu firmware*
 
 > I have been unable to get the majority of my Lua test code to work properly on any Nodemcu firmware version after 20150127.  Issues with later firmware version have ranged from connection errors with broker to crashes of various sorts.  These Lua test scripts will probably only run on firmware **20150127**!
+
 mqtt_test.lua
 ----------------
 This lua script creates an MQTT accessible counter service.  A service is defined as:
