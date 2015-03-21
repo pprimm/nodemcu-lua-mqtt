@@ -18,7 +18,7 @@ This lua script creates an MQTT accessible counter service.  A service is define
 > *Service API*
 > - **status**: state variable to show whether offline or online (enhanced by use of Last Will Testament)
 > - **counterValue**: main state variable with value of counter (read: get/ESP8266/counterValue) (write: set/ESP8266/counterValue).  The allow value is clipped at 0..100
->  - **counterCmd**: this set topic will control whether the counter goes up or down.  Allowed values are "up" or "down"
+> - **counterCmd**: this set topic will control whether the counter goes up or down.  Allowed values are "up" or "down"
 > - **echo**:  whatever you write to the set topic gets echoed to the get topic (read: get/ESP8266/echo) (write: set/ESP8266/echo)
 
 The script also handles reconnecting to the MQTT broker after loss of connection.  
